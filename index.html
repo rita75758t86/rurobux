@@ -1,0 +1,1706 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>RuRobux — коды Roblox</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #eef7ff;
+    background:
+        radial-gradient(circle at 90% 15%, rgba(35,150,210,.10), transparent 22%),
+        radial-gradient(circle at 5% 80%, rgba(40,90,150,.08), transparent 22%),
+        #050a11;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* ===== ЗВЁЗДЫ ===== */
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -3;
+    pointer-events: none;
+    opacity: .16;
+
+    background-image:
+        radial-gradient(circle, white 1px, transparent 1.5px),
+        radial-gradient(circle, #7edcff 1px, transparent 1.5px);
+
+    background-size:
+        150px 150px,
+        230px 230px;
+
+    background-position:
+        20px 30px,
+        80px 120px;
+}
+
+/* ===== ЛЁГКАЯ СЕТКА ===== */
+
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    pointer-events: none;
+    opacity: .055;
+
+    background-image:
+        linear-gradient(rgba(80,190,255,.7) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(80,190,255,.7) 1px, transparent 1px);
+
+    background-size: 55px 55px;
+}
+
+/* ===== МАЛЕНЬКАЯ РАКЕТА ===== */
+
+.flying-rocket {
+    position: fixed;
+    left: -80px;
+    top: 35%;
+    z-index: -1;
+
+    font-size: 30px;
+    opacity: .55;
+
+    filter:
+        drop-shadow(0 0 8px rgba(60,200,255,.8));
+
+    animation: rocketFly 22s linear infinite;
+
+    pointer-events: none;
+}
+
+@keyframes rocketFly {
+
+    0% {
+        transform: translateX(0) rotate(12deg);
+        opacity: 0;
+    }
+
+    8% {
+        opacity: .55;
+    }
+
+    90% {
+        opacity: .55;
+    }
+
+    100% {
+        transform:
+            translateX(calc(100vw + 180px))
+            rotate(12deg);
+
+        opacity: 0;
+    }
+}
+
+/* ===== HEADER ===== */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+
+    height: 76px;
+
+    background: rgba(4,9,16,.94);
+
+    border-bottom:
+        1px solid rgba(60,190,255,.18);
+
+    backdrop-filter: blur(15px);
+}
+
+.nav {
+    max-width: 1180px;
+    height: 100%;
+    margin: auto;
+
+    padding: 0 18px;
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* ===== LOGO ===== */
+
+.logo {
+    min-width: 145px;
+
+    font-size: 25px;
+    font-weight: 900;
+}
+
+.logo .blue {
+    color: #4fc7ff;
+}
+
+.logo-small {
+    display: block;
+
+    margin-top: 3px;
+
+    color: #687d90;
+
+    font-size: 8px;
+    letter-spacing: 1.5px;
+}
+
+/* ===== SEARCH ===== */
+
+.search {
+    flex: 1;
+    max-width: 650px;
+}
+
+.search input {
+    width: 100%;
+    height: 44px;
+
+    padding: 0 16px;
+
+    color: white;
+
+    background: #091521;
+
+    border:
+        1px solid rgba(60,180,240,.28);
+
+    border-radius: 13px;
+
+    outline: none;
+
+    font-size: 14px;
+
+    transition: .2s;
+}
+
+.search input::placeholder {
+    color: #667d90;
+}
+
+.search input:focus {
+    border-color: #4fcaff;
+
+    box-shadow:
+        0 0 0 3px rgba(70,200,255,.06);
+}
+
+/* ===== ADMIN ===== */
+
+.admin-button {
+    border:
+        1px solid rgba(70,195,255,.5);
+
+    background: #0c1c2b;
+
+    color: #65ceff;
+
+    border-radius: 11px;
+
+    padding: 11px 16px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+    transition: .2s;
+}
+
+.admin-button:hover {
+    background: #10283a;
+
+    box-shadow:
+        0 0 18px rgba(70,190,255,.12);
+}
+
+/* ===== MAIN ===== */
+
+main {
+    max-width: 1180px;
+
+    margin: auto;
+
+    padding:
+        28px 18px 60px;
+}
+
+/* ===== HERO ===== */
+
+.hero {
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 42px;
+
+    border-radius: 21px;
+
+    border:
+        1px solid rgba(50,170,225,.25);
+
+    background:
+        linear-gradient(
+            115deg,
+            rgba(9,23,36,.98),
+            rgba(8,18,29,.96)
+        );
+
+    box-shadow:
+        0 18px 50px rgba(0,0,0,.35);
+}
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 190px;
+    height: 190px;
+
+    right: -50px;
+    top: -65px;
+
+    border-radius: 50%;
+
+    border:
+        1px solid rgba(70,190,240,.12);
+
+    box-shadow:
+        0 0 30px rgba(50,190,255,.06);
+}
+
+.hero::after {
+    content: "🚀";
+
+    position: absolute;
+
+    right: 9%;
+    bottom: 25px;
+
+    font-size: 39px;
+
+    opacity: .65;
+
+    filter:
+        drop-shadow(0 0 10px rgba(60,200,255,.8));
+
+    animation: smallRocket 7s ease-in-out infinite;
+}
+
+@keyframes smallRocket {
+
+    50% {
+        transform:
+            translate(15px,-10px)
+            rotate(-4deg);
+    }
+}
+
+.kicker {
+    color: #63ccff;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 1.7px;
+}
+
+.hero h1 {
+    margin:
+        13px 0 15px;
+
+    font-size:
+        clamp(40px, 6vw, 65px);
+
+    line-height: .98;
+}
+
+.hero h1 span {
+    color: #4fc6ff;
+}
+
+.hero p {
+    max-width: 720px;
+
+    color: #91a7ba;
+
+    line-height: 1.7;
+
+    font-size: 15px;
+}
+
+.stats {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-top: 22px;
+}
+
+.stat {
+    padding: 8px 11px;
+
+    border-radius: 8px;
+
+    border:
+        1px solid rgba(60,180,240,.18);
+
+    background: rgba(5,15,25,.65);
+
+    color: #8197a9;
+
+    font-size: 11px;
+}
+
+.stat.online {
+    color: #3ff09a;
+}
+
+/* ===== TABS ===== */
+
+.tabs {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin:
+        23px 0;
+}
+
+.tab {
+    padding:
+        10px 14px;
+
+    border-radius: 11px;
+
+    border:
+        1px solid rgba(50,145,200,.25);
+
+    background: #091521;
+
+    color: #8ea5b7;
+
+    cursor: pointer;
+
+    transition: .2s;
+}
+
+.tab:hover {
+    border-color: #3ebcf0;
+    color: #cbeeff;
+}
+
+.tab.active {
+    color: #03111a;
+
+    background: #52c8f5;
+
+    border-color: #91e4ff;
+
+    font-weight: bold;
+
+    box-shadow:
+        0 5px 18px rgba(50,190,240,.12);
+}
+
+/* ===== SECTION TITLE ===== */
+
+.section-head {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin:
+        10px 0 15px;
+}
+
+.section-head h2 {
+    margin: 0;
+
+    font-size: 21px;
+}
+
+.count {
+    color: #687f92;
+
+    font-size: 12px;
+}
+
+/* ===== CARDS ===== */
+
+.codes-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 15px;
+}
+
+.code-card {
+    position: relative;
+
+    min-height: 245px;
+
+    padding: 17px;
+
+    overflow: hidden;
+
+    border-radius: 18px;
+
+    border:
+        1px solid rgba(55,155,205,.35);
+
+    background:
+        linear-gradient(
+            145deg,
+            #0c1b29,
+            #07111b
+        );
+
+    box-shadow:
+        0 12px 30px rgba(0,0,0,.28);
+
+    animation:
+        cardAppear .5s both;
+
+    transition:
+        transform .2s,
+        border-color .2s,
+        box-shadow .2s;
+}
+
+/* маленький внутренний иллюминатор */
+
+.code-card::before {
+    content: "";
+
+    position: absolute;
+
+    width: 145px;
+    height: 145px;
+
+    left: 50%;
+    top: 54%;
+
+    transform:
+        translate(-50%,-50%);
+
+    border-radius: 50%;
+
+    border:
+        1px solid rgba(80,205,255,.09);
+
+    box-shadow:
+        inset 0 0 25px rgba(50,170,220,.035);
+
+    pointer-events: none;
+}
+
+.code-card:hover {
+    transform:
+        translateY(-4px);
+
+    border-color:
+        rgba(70,200,255,.65);
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,.4),
+        0 0 20px rgba(40,180,240,.06);
+}
+
+.card-top {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 10px;
+}
+
+.game-name {
+    color: #60ccff;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: .7px;
+
+    text-transform: uppercase;
+}
+
+.status {
+    color: #8298aa;
+
+    font-size: 10px;
+
+    white-space: nowrap;
+}
+
+.led {
+    display: inline-block;
+
+    width: 8px;
+    height: 8px;
+
+    margin-right: 4px;
+
+    border-radius: 50%;
+}
+
+.status-active .led {
+    background: #35ef93;
+
+    box-shadow:
+        0 0 9px #35ef93;
+}
+
+.status-limited .led {
+    background: #ffd34f;
+
+    box-shadow:
+        0 0 9px #ffd34f;
+}
+
+.status-expired .led {
+    background: #ff4d60;
+
+    box-shadow:
+        0 0 9px #ff4d60;
+}
+
+/* ===== CODE ===== */
+
+.card-center {
+    position: relative;
+    z-index: 2;
+
+    text-align: center;
+
+    margin-top: 31px;
+}
+
+.code {
+    display: inline-block;
+
+    max-width: 100%;
+
+    padding:
+        11px 14px;
+
+    color: white;
+
+    background: #081724;
+
+    border:
+        1px solid rgba(60,185,240,.42);
+
+    border-radius: 10px;
+
+    font-size: 17px;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+
+    overflow-wrap: anywhere;
+
+    box-shadow:
+        0 0 18px rgba(40,180,240,.04);
+}
+
+.reward {
+    min-height: 34px;
+
+    margin-top: 12px;
+
+    color: #9eb1c0;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+}
+
+/* ===== BUTTONS ===== */
+
+.card-buttons {
+    position: relative;
+    z-index: 3;
+
+    display: flex;
+
+    gap: 7px;
+
+    margin-top: 18px;
+}
+
+.card-buttons button {
+    height: 38px;
+
+    border-radius: 9px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+}
+
+.copy-button {
+    flex: 1;
+
+    border: 0;
+
+    background: #51c7f4;
+
+    color: #03111a;
+}
+
+.copy-button:hover {
+    background: #72d4fa;
+}
+
+.open-button {
+    width: 80px;
+
+    border:
+        1px solid rgba(60,170,220,.4);
+
+    background: #081724;
+
+    color: #65cfff;
+}
+
+.open-button:hover {
+    background: #0d2232;
+}
+
+/* ===== EMPTY ===== */
+
+.empty {
+    display: none;
+
+    text-align: center;
+
+    padding: 75px 20px;
+
+    color: #71889b;
+
+    font-size: 15px;
+}
+
+/* ===== FOOTER ===== */
+
+footer {
+    border-top:
+        1px solid rgba(255,255,255,.07);
+
+    padding:
+        25px 15px;
+
+    text-align: center;
+
+    color: #60778a;
+
+    font-size: 13px;
+}
+
+/* ===== MODAL ===== */
+
+.modal {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 100;
+
+    display: none;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+
+    background: rgba(0,0,0,.75);
+
+    backdrop-filter: blur(5px);
+}
+
+.modal.show {
+    display: flex;
+}
+
+.modal-box {
+    width: min(430px, 100%);
+
+    padding: 25px;
+
+    border-radius: 17px;
+
+    border:
+        1px solid rgba(60,190,255,.35);
+
+    background: #091521;
+
+    box-shadow:
+        0 25px 70px rgba(0,0,0,.65);
+}
+
+.modal-box h2 {
+    margin-top: 0;
+}
+
+.modal-box p {
+    color: #91a7b8;
+}
+
+.modal-box input {
+    width: 100%;
+
+    height: 43px;
+
+    padding: 0 12px;
+
+    margin:
+        7px 0 13px;
+
+    color: white;
+
+    background: #07111b;
+
+    border:
+        1px solid rgba(60,170,220,.3);
+
+    border-radius: 8px;
+
+    outline: none;
+}
+
+.modal-box button {
+    padding:
+        10px 15px;
+
+    border-radius: 9px;
+
+    cursor: pointer;
+}
+
+.login-button {
+    border: 0;
+
+    background: #51c7f4;
+
+    color: #03111a;
+
+    font-weight: bold;
+}
+
+.close-button {
+    margin-left: 6px;
+
+    color: #9fb1bf;
+
+    background: #0a1723;
+
+    border:
+        1px solid rgba(255,255,255,.12);
+}
+
+.error {
+    display: none;
+
+    color: #ff6575 !important;
+}
+
+/* ===== ANIMATION ===== */
+
+@keyframes cardAppear {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+/* ===== TABLET ===== */
+
+@media (max-width: 950px) {
+
+    .codes-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+/* ===== PHONE ===== */
+
+@media (max-width: 650px) {
+
+    header {
+        height: 68px;
+    }
+
+    .nav {
+        padding:
+            0 12px;
+
+        gap: 9px;
+    }
+
+    .logo {
+        min-width: auto;
+
+        font-size: 20px;
+    }
+
+    .logo-small {
+        display: none;
+    }
+
+    .search {
+        display: none;
+    }
+
+    .admin-button {
+        margin-left: auto;
+
+        padding:
+            10px 12px;
+
+        font-size: 0;
+    }
+
+    .admin-button::after {
+        content: "⚙️";
+
+        font-size: 15px;
+    }
+
+    main {
+        padding:
+            18px 12px 45px;
+    }
+
+    .hero {
+        padding:
+            28px 21px;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero::after {
+        right: 7%;
+
+        bottom: 17px;
+
+        font-size: 30px;
+    }
+
+    .tabs {
+        gap: 6px;
+    }
+
+    .tab {
+        padding:
+            9px 10px;
+
+        font-size: 12px;
+    }
+
+    .codes-grid {
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+    }
+
+    .code-card {
+        min-height: 230px;
+    }
+
+    .section-head h2 {
+        font-size: 18px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Маленькая ракета на заднем плане -->
+<div class="flying-rocket">🚀</div>
+
+<header>
+
+    <div class="nav">
+
+        <div class="logo">
+            🪐 Ru<span class="blue">Robux</span>
+
+            <span class="logo-small">
+                КАТАЛОГ КОДОВ ROBLOX
+            </span>
+        </div>
+
+        <div class="search">
+
+            <input
+                id="search"
+                type="text"
+                placeholder="🔎 Поиск по игре, коду или награде..."
+            >
+
+        </div>
+
+        <button
+            class="admin-button"
+            onclick="openAdmin()"
+        >
+            ⚙️ АДМИНКА
+        </button>
+
+    </div>
+
+</header>
+
+
+<main>
+
+    <section class="hero">
+
+        <div class="kicker">
+            ✦ ФАНАТСКИЙ КАТАЛОГ ROBLOX
+        </div>
+
+        <h1>
+            Коды и
+            <span>промокоды</span>
+            <br>
+            Roblox
+        </h1>
+
+        <p>
+            Рабочие коды для игр, промокоды Roblox,
+            предметы, ивенты и бесплатные награды.
+            Найди нужный код и скопируй его за секунду.
+        </p>
+
+        <div class="stats">
+
+            <span class="stat online">
+                ● Система онлайн
+            </span>
+
+            <span
+                class="stat"
+                id="totalCodes"
+            >
+                0 кодов
+            </span>
+
+            <span class="stat">
+                ✦ Обновляется регулярно
+            </span>
+
+        </div>
+
+    </section>
+
+
+    <div class="tabs">
+
+        <button
+            class="tab active"
+            data-type="all"
+        >
+            ✨ Всё
+        </button>
+
+        <button
+            class="tab"
+            data-type="game"
+        >
+            🎮 Игры
+        </button>
+
+        <button
+            class="tab"
+            data-type="promo"
+        >
+            👕 Промокоды Roblox
+        </button>
+
+        <button
+            class="tab"
+            data-type="item"
+        >
+            🎁 Предметы
+        </button>
+
+        <button
+            class="tab"
+            data-type="event"
+        >
+            🎉 Ивенты
+        </button>
+
+        <button
+            class="tab"
+            data-type="reward"
+        >
+            💎 Награды
+        </button>
+
+        <button
+            class="tab"
+            data-type="expired"
+        >
+            🔴 Истёкшие
+        </button>
+
+    </div>
+
+
+    <div class="section-head">
+
+        <h2 id="sectionTitle">
+            🚀 Все актуальные коды
+        </h2>
+
+        <span
+            class="count"
+            id="count"
+        >
+            Загрузка...
+        </span>
+
+    </div>
+
+
+    <div
+        class="codes-grid"
+        id="codesGrid"
+    ></div>
+
+
+    <div
+        class="empty"
+        id="empty"
+    >
+        🌌 Ничего не найдено
+    </div>
+
+</main>
+
+
+<footer>
+    © 2026 RuRobux · Фанатский каталог кодов Roblox
+</footer>
+
+
+<!-- АДМИНКА -->
+
+<div
+    class="modal"
+    id="adminModal"
+>
+
+    <div class="modal-box">
+
+        <h2>
+            🔐 Админка RuRobux
+        </h2>
+
+        <p>
+            Введите пароль администратора.
+        </p>
+
+        <input
+            id="adminPassword"
+            type="password"
+            placeholder="Пароль"
+        >
+
+        <button
+            class="login-button"
+            onclick="loginAdmin()"
+        >
+            Войти
+        </button>
+
+        <button
+            class="close-button"
+            onclick="closeAdmin()"
+        >
+            Закрыть
+        </button>
+
+        <p
+            class="error"
+            id="loginError"
+        >
+            ❌ Неверный пароль
+        </p>
+
+    </div>
+
+</div>
+
+
+<script>
+
+let codes = [];
+
+let currentType = "all";
+
+
+const titles = {
+
+    all: "🚀 Все актуальные коды",
+
+    game: "🎮 Коды для игр",
+
+    promo: "👕 Промокоды Roblox",
+
+    item: "🎁 Предметы",
+
+    event: "🎉 Ивент-коды",
+
+    reward: "💎 Бесплатные награды",
+
+    expired: "🔴 Истёкшие коды"
+
+};
+
+
+/* ===== ЭКРАНИРОВАНИЕ ===== */
+
+function escapeHTML(value) {
+
+    return String(value ?? "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+}
+
+
+/* ===== СТАТУС ===== */
+
+function getStatus(status) {
+
+    if (status === "limited") {
+
+        return {
+            text: "Лимит",
+            className: "status-limited"
+        };
+
+    }
+
+    if (status === "expired") {
+
+        return {
+            text: "Истёк",
+            className: "status-expired"
+        };
+
+    }
+
+    return {
+        text: "Активен",
+        className: "status-active"
+    };
+}
+
+
+/* ===== ОТРИСОВКА ===== */
+
+function renderCodes() {
+
+    const query =
+        document
+            .getElementById("search")
+            .value
+            .toLowerCase()
+            .trim();
+
+
+    const filtered = codes.filter(code => {
+
+        const type =
+            code.type || "game";
+
+        let categoryOK = false;
+
+
+        if (currentType === "all") {
+
+            categoryOK =
+                code.status !== "expired";
+
+        }
+
+        else if (currentType === "expired") {
+
+            categoryOK =
+                code.status === "expired";
+
+        }
+
+        else {
+
+            categoryOK =
+                type === currentType &&
+                code.status !== "expired";
+
+        }
+
+
+        const text = [
+
+            code.game,
+
+            code.code,
+
+            code.reward,
+
+            code.description
+
+        ]
+            .join(" ")
+            .toLowerCase();
+
+
+        return categoryOK &&
+               text.includes(query);
+
+    });
+
+
+    document.getElementById(
+        "sectionTitle"
+    ).textContent =
+        titles[currentType];
+
+
+    document.getElementById(
+        "count"
+    ).textContent =
+        filtered.length + " записей";
+
+
+    document.getElementById(
+        "totalCodes"
+    ).textContent =
+        codes.length + " кодов";
+
+
+    const grid =
+        document.getElementById("codesGrid");
+
+
+    grid.innerHTML = "";
+
+
+    filtered.forEach((code, index) => {
+
+        const status =
+            getStatus(code.status);
+
+
+        const card =
+            document.createElement("article");
+
+
+        card.className =
+            "code-card";
+
+
+        card.style.animationDelay =
+            Math.min(index, 15) * 35 + "ms";
+
+
+        card.innerHTML = `
+
+            <div class="card-top">
+
+                <span class="game-name">
+                    ${escapeHTML(code.game || "Roblox")}
+                </span>
+
+                <span
+                    class="status ${status.className}"
+                >
+                    <i class="led"></i>
+                    ${status.text}
+                </span>
+
+            </div>
+
+
+            <div class="card-center">
+
+                <div class="code">
+                    ${escapeHTML(code.code || "—")}
+                </div>
+
+                <div class="reward">
+                    🎁
+                    ${escapeHTML(
+                        code.reward || "Бесплатная награда"
+                    )}
+                </div>
+
+            </div>
+
+
+            <div class="card-buttons">
+
+                <button
+                    class="copy-button"
+                    onclick="copyCode(${JSON.stringify(code.code || "")})"
+                >
+                    📋 Скопировать
+                </button>
+
+                <button
+                    class="open-button"
+                    onclick="openCode(${JSON.stringify(code)})"
+                >
+                    🎮 Открыть
+                </button>
+
+            </div>
+
+        `;
+
+
+        grid.appendChild(card);
+
+    });
+
+
+    document.getElementById(
+        "empty"
+    ).style.display =
+        filtered.length === 0
+            ? "block"
+            : "none";
+
+}
+
+
+/* ===== ЗАГРУЗКА КОДОВ ===== */
+
+async function loadCodes() {
+
+    try {
+
+        const response =
+            await fetch("/api/codes");
+
+
+        if (!response.ok) {
+
+            throw new Error(
+                "Ошибка сервера"
+            );
+
+        }
+
+
+        codes =
+            await response.json();
+
+
+        if (!Array.isArray(codes)) {
+
+            codes = [];
+
+        }
+
+
+        renderCodes();
+
+    }
+
+    catch (error) {
+
+        console.error(error);
+
+        document.getElementById(
+            "count"
+        ).textContent =
+            "Ошибка загрузки";
+
+        document.getElementById(
+            "empty"
+        ).style.display =
+            "block";
+
+        document.getElementById(
+            "empty"
+        ).textContent =
+            "⚠️ Не удалось загрузить коды. Проверь, запущен ли server.js.";
+
+    }
+
+}
+
+
+/* ===== КОПИРОВАНИЕ ===== */
+
+async function copyCode(code) {
+
+    try {
+
+        await navigator.clipboard.writeText(code);
+
+        alert(
+            "✅ Код скопирован: " + code
+        );
+
+    }
+
+    catch {
+
+        prompt(
+            "Скопируй код:",
+            code
+        );
+
+    }
+
+}
+
+
+/* ===== ОТКРЫТЬ ===== */
+
+function openCode(code) {
+
+    if (
+        code.type === "promo"
+    ) {
+
+        window.open(
+            "https://www.roblox.com/redeem",
+            "_blank"
+        );
+
+        return;
+
+    }
+
+
+    alert(
+        "🎮 Открой игру " +
+        (code.game || "") +
+        " и найди раздел Codes."
+    );
+
+}
+
+
+/* ===== КАТЕГОРИИ ===== */
+
+document
+    .querySelectorAll(".tab")
+    .forEach(button => {
+
+        button.addEventListener(
+            "click",
+            () => {
+
+                document
+                    .querySelectorAll(".tab")
+                    .forEach(btn => {
+
+                        btn.classList.remove(
+                            "active"
+                        );
+
+                    });
+
+
+                button.classList.add(
+                    "active"
+                );
+
+
+                currentType =
+                    button.dataset.type;
+
+
+                renderCodes();
+
+            }
+        );
+
+    });
+
+
+/* ===== ПОИСК ===== */
+
+document
+    .getElementById("search")
+    .addEventListener(
+        "input",
+        renderCodes
+    );
+
+
+/* ===== АДМИНКА ===== */
+
+function openAdmin() {
+
+    document
+        .getElementById("adminModal")
+        .classList.add("show");
+
+    document
+        .getElementById("adminPassword")
+        .focus();
+
+}
+
+
+function closeAdmin() {
+
+    document
+        .getElementById("adminModal")
+        .classList.remove("show");
+
+}
+
+
+async function loginAdmin() {
+
+    const password =
+        document
+            .getElementById("adminPassword")
+            .value;
+
+
+    try {
+
+        const response =
+            await fetch(
+                "/api/admin/login",
+                {
+                    method: "POST",
+
+                    headers: {
+                        "Content-Type":
+                            "application/json"
+                    },
+
+                    body:
+                        JSON.stringify({
+                            password
+                        })
+                }
+            );
+
+
+        if (response.ok) {
+
+            closeAdmin();
+
+            alert(
+                "✅ Вход выполнен!"
+            );
+
+        }
+
+        else {
+
+            document
+                .getElementById("loginError")
+                .style.display =
+                "block";
+
+        }
+
+    }
+
+    catch {
+
+        document
+            .getElementById("loginError")
+            .textContent =
+            "⚠️ Сервер недоступен";
+
+        document
+            .getElementById("loginError")
+            .style.display =
+            "block";
+
+    }
+
+}
+
+
+/* ===== ESC ДЛЯ МОДАЛКИ ===== */
+
+document.addEventListener(
+    "keydown",
+    event => {
+
+        if (event.key === "Escape") {
+
+            closeAdmin();
+
+        }
+
+    }
+);
+
+
+/* ===== ЗАПУСК ===== */
+
+loadCodes();
+
+</script>
+
+</body>
+</html>
